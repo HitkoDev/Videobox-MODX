@@ -31,3 +31,8 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+assets/components/videobox/cache/*
+_build/build.config.php
+assets/components/videobox/css/*.min.css
+assets/components/videobox/js/*.min.js

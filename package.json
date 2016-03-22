@@ -1,0 +1,17 @@
+{
+  "license": "GPL-3.0",
+  "readme": "README.md",
+  "version": "5.0.0",
+  "name": "Videobox-MODX",
+  "copyright": "Hitko",
+  "homepage": "https://hitko.eu/videobox/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HitkoDev/Videobox-MODX"
+  },
+  "devDependencies": {
+    "jquery": "^2.2.2",
+    "videobox-js": "git+https://github.com/HitkoDev/Videobox-js.git",
+    "web-animations-js": "^2.1.4"
+  }
+}

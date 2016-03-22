@@ -1,0 +1,1 @@
+<div class="vb_video_frame" style="max-width: [[+pWidth]]px;"><div class="vb_video_sizer" style="padding-bottom: [[+ratio]]%;"><iframe src="[[+link]]" frameborder="0" allowfullscreen oallowfullscreen msallowfullscreen webkitallowfullscreen mozallowfullscreen ></iframe></div><span class="vb_video_title" >[[+title]]</span></div>
