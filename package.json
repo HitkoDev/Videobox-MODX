@@ -10,8 +10,6 @@
     "url": "https://github.com/HitkoDev/Videobox-MODX"
   },
   "devDependencies": {
-    "jquery": "^2.2.2",
-    "videobox-js": "git+https://github.com/HitkoDev/Videobox-js.git",
-    "web-animations-js": "^2.1.4"
+    "videobox": "git+https://github.com/HitkoDev/Videobox.git"
   }
 }

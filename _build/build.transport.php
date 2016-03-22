@@ -76,15 +76,15 @@ $category->addMany($chunks);
 /* copy files */
 
 // Videobox-JS
-copy($sources['root'] . 'node_modules/videobox-js/dist/videobox.css', $sources['root'] . 'assets/components/videobox/css/videobox.css');
-copy($sources['root'] . 'node_modules/videobox-js/dist/videobox.min.css', $sources['root'] . 'assets/components/videobox/css/videobox.min.css');
-copy($sources['root'] . 'node_modules/videobox-js/dist/videobox.js', $sources['root'] . 'assets/components/videobox/js/videobox.js');
-copy($sources['root'] . 'node_modules/videobox-js/dist/videobox.min.js', $sources['root'] . 'assets/components/videobox/js/videobox.min.js');
+copy($sources['root'] . 'node_modules/videobox/dist/videobox.css', $sources['root'] . 'assets/components/videobox/css/videobox.css');
+copy($sources['root'] . 'node_modules/videobox/dist/videobox.min.css', $sources['root'] . 'assets/components/videobox/css/videobox.min.css');
+copy($sources['root'] . 'node_modules/videobox/dist/videobox.js', $sources['root'] . 'assets/components/videobox/js/videobox.js');
+copy($sources['root'] . 'node_modules/videobox/dist/videobox.min.js', $sources['root'] . 'assets/components/videobox/js/videobox.min.js');
 
 // VideoJS
-copy($sources['root'] . 'node_modules/videobox-js/dist/video-js/video.js', $sources['root'] . 'assets/components/videobox/video-js/video.js');
-copy($sources['root'] . 'node_modules/videobox-js/dist/video-js/video.min.js', $sources['root'] . 'assets/components/videobox/video-js/video.min.js');
-copy($sources['root'] . 'node_modules/videobox-js/dist/video-js/video-js.swf', $sources['root'] . 'assets/components/videobox/video-js/video-js.swf');
+copy($sources['root'] . 'node_modules/videobox/dist/video-js/video.js', $sources['root'] . 'assets/components/videobox/video-js/video.js');
+copy($sources['root'] . 'node_modules/videobox/dist/video-js/video.min.js', $sources['root'] . 'assets/components/videobox/video-js/video.min.js');
+copy($sources['root'] . 'node_modules/videobox/dist/video-js/video-js.swf', $sources['root'] . 'assets/components/videobox/video-js/video-js.swf');
 
 // libs
 copy($sources['root'] . 'node_modules/jquery/dist/jquery.min.js', $sources['root'] . 'assets/components/videobox/js/jquery.min.js');
