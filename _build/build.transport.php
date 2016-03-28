@@ -82,9 +82,9 @@ copy($sources['root'] . 'node_modules/videobox/dist/videobox.js', $sources['root
 copy($sources['root'] . 'node_modules/videobox/dist/videobox.min.js', $sources['root'] . 'assets/components/videobox/js/videobox.min.js');
 
 // VideoJS
-copy($sources['root'] . 'node_modules/videobox/dist/video-js/video.js', $sources['root'] . 'assets/components/videobox/video-js/video.js');
-copy($sources['root'] . 'node_modules/videobox/dist/video-js/video.min.js', $sources['root'] . 'assets/components/videobox/video-js/video.min.js');
-copy($sources['root'] . 'node_modules/videobox/dist/video-js/video-js.swf', $sources['root'] . 'assets/components/videobox/video-js/video-js.swf');
+copy($sources['root'] . 'node_modules/video.js/dist/video.js', $sources['root'] . 'assets/components/videobox/video-js/video.js');
+copy($sources['root'] . 'node_modules/video.js/dist/video.min.js', $sources['root'] . 'assets/components/videobox/video-js/video.min.js');
+copy($sources['root'] . 'node_modules/video.js/dist/video-js.swf', $sources['root'] . 'assets/components/videobox/video-js/video-js.swf');
 
 // libs
 copy($sources['root'] . 'node_modules/jquery/dist/jquery.min.js', $sources['root'] . 'assets/components/videobox/js/jquery.min.js');

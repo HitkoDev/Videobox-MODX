@@ -10,6 +10,7 @@
     "url": "https://github.com/HitkoDev/Videobox-MODX"
   },
   "devDependencies": {
+    "video.js": "^5.8.6",
     "videobox": "git+https://github.com/HitkoDev/Videobox.git"
   }
 }

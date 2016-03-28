@@ -81,6 +81,10 @@ $scriptProperties['display'] = $display;
 unset($scriptProperties['multipleDisplay']);
 unset($scriptProperties['singleDisplay']);
 
+$vbOptions = array('width' => (float)$scriptProperties['pWidth'], 'height' => (float)$scriptProperties['pHeight']);
+if(isset($scriptProperties['style'])) $vbOptions['style'] = $scriptProperties['style'];
+if(isset($scriptProperties['class'])) $vbOptions['class'] = $scriptProperties['class'];
+
 if(count($videos) > 1){
     $tpl = $display == 'links' ? $scriptProperties['linkTpl'] : $scriptProperties['thumbTpl'];
     $start = 0;
@@ -98,6 +102,8 @@ if(count($videos) > 1){
     if($scriptProperties['player'] == 'vbinline' && ($display == 'gallery' || $display == 'slider')){
         $scriptProperties['pWidth'] = $scriptProperties['tWidth'];
         $scriptProperties['pHeight'] = $scriptProperties['tHeight'];
+        $vbOptions['width'] = (float)$scriptProperties['pWidth'];
+        $vbOptions['height'] = (float)$scriptProperties['pHeight'];
     }
     
     ksort($scriptProperties);
@@ -106,7 +112,7 @@ if(count($videos) > 1){
     if(!$content){
         $n = 0;
         $content = '';
-        $props = array('rel' => $scriptProperties['player'], 'pWidth' => $scriptProperties['pWidth'], 'pHeight' => $scriptProperties['pHeight']);
+        $props = array('vbOptions' => htmlspecialchars(json_encode($vbOptions)), 'rel' => $scriptProperties['player'], 'pWidth' => $scriptProperties['pWidth'], 'pHeight' => $scriptProperties['pHeight']);
         $filtered = array();
         foreach($videos as $video){
             $n++;
@@ -176,7 +182,7 @@ if(count($videos) > 1){
     $data = $videobox->getCache($propHash);
     if($data) return $data;
     $video = $videos[0];
-    $props = array_merge(array('rel' => $scriptProperties['player'], 'pWidth' => $scriptProperties['pWidth'], 'pHeight' => $scriptProperties['pHeight'], 'tWidth' => $scriptProperties['tWidth'], 'tHeight' => $scriptProperties['tHeight']), array('title' => $video->getTitle(), 'link' => $video->getPlayerLink($display != 'player' || $autoPlay), 'ratio' => (100*$scriptProperties['pHeight']/$scriptProperties['pWidth'])));
+    $props = array_merge(array('vbOptions' => htmlspecialchars(json_encode($vbOptions)), 'rel' => $scriptProperties['player'], 'pWidth' => $scriptProperties['pWidth'], 'pHeight' => $scriptProperties['pHeight'], 'tWidth' => $scriptProperties['tWidth'], 'tHeight' => $scriptProperties['tHeight']), array('title' => $video->getTitle(), 'link' => $video->getPlayerLink($display != 'player' || $autoPlay), 'ratio' => (100*$scriptProperties['pHeight']/$scriptProperties['pWidth'])));
     switch($display){
         case 'links':
             $props['linkText'] = isset($linkText) ? trim($linkText) : $video->getTitle(true);
