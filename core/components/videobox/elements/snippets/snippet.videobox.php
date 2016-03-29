@@ -23,6 +23,8 @@ $videobox = $modx->getService('videobox', 'Videobox', $vbCore . 'model/videobox/
 if(!($videobox instanceof Videobox)) return '';
 
 if(!isset($scriptProperties['videos']) && isset($scriptProperties['video'])) $scriptProperties['videos'] = $scriptProperties['video'];
+$v = $videobox->parseTemplate($scriptProperties['videos']);		
+if($v) $scriptProperties['videos'] = $v;
 if(!isset($scriptProperties['videos'])) return;
 $scriptProperties['color'] = trim(str_replace('#', '', $scriptProperties['color']));
 if(strlen($scriptProperties['color']) != 6) $scriptProperties['color'] = '';
