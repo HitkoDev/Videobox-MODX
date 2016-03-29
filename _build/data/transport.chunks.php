@@ -66,5 +66,16 @@ $chunk->fromArray(array(
 ),'',true,true);
 $chunks[] = $chunk;
 
+if(isset($_GET['joom']) && $_GET['joom']){
+	$doc = new DOMDocument();
+	$doc->loadHTML('<field/>');
+	$el = $doc->getElementsByTagName('field')[0];
+	foreach($chunks as $chk){
+		$el->setAttribute('default', $chk->get('snippet'));
+		var_dump($chk->get('name'));
+		var_dump($doc->saveXML($el));
+	}
+}
+
 unset($chunk);
 return $chunks;
