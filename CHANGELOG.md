@@ -1,6 +1,10 @@
-### 5.0.0 rc 3 - *28. April 2016*
+### 5.0.0 rc 4 - *28. April 2016*
   * fix slider bug
   * allow users to modify the UI colour
+
+### 5.0.0 rc 3 - *29. March 2016*
+  * updated core
+  * bug fixes
 
 ### 5.0.0 rc 2 - *22. March 2016*
   * code fixes and optimisations
