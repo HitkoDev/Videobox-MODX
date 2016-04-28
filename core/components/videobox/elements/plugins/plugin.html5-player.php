@@ -38,6 +38,7 @@ if($req_video){
 	$title = isset($_REQUEST['title']) ? trim($_REQUEST['title']) : '';
 	$s = isset($_REQUEST['start']) ? trim($_REQUEST['start']) : '';
 	$e = isset($_REQUEST['end']) ? trim($_REQUEST['end']) : '';
+	$c = isset($_REQUEST['color']) ? trim($_REQUEST['color']) : '';
 	$start = 0;
 	$end = 0;
 	
@@ -75,6 +76,10 @@ if($req_video){
 			'end' => $video->end > $video->start ? $video->end : 0,
 			'auto' => $autoplay ? 1 : 0
 		);
+		if($c){
+			$overrides = file_get_contents($_GET['dev'] ? '/srv/htdocs/Videobox/dist/overrides.css' : $videobox->config['assets_path'] . 'css/overrides.min.css');
+        		$_video['style_override'] = str_replace(array('#005723', '#84d1a4'), array('#' . $c, '#' . $c), $overrides);
+		}
 		$sources = '';
 		foreach($video->getSourceFormats() as $source){
 			$sources .= '<source src="' . $_video['url'] . '.' . $source[0] . '" type="' . $source[1] . '">';

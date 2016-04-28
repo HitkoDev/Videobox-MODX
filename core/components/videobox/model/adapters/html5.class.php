@@ -67,6 +67,7 @@ class HTML5Video extends VideoboxAdapter {
 		if($this->title) $props['title'] = $this->title;
 		if($this->start > 0) $props['start'] = $this->splitOffset($this->start);
 		if($this->end > 0) $props['end'] = $this->splitOffset($this->end);
+        if($this->properties['color']) $props['color'] = $this->properties['color'];
 		return $this->properties['modx']->makeUrl($this->properties['modx']->resourceIdentifier, '', $props, 'full');
 	}
 	

@@ -78,6 +78,8 @@ $category->addMany($chunks);
 // Videobox-JS
 copy($sources['root'] . 'node_modules/videobox/dist/videobox.css', $sources['root'] . 'assets/components/videobox/css/videobox.css');
 copy($sources['root'] . 'node_modules/videobox/dist/videobox.min.css', $sources['root'] . 'assets/components/videobox/css/videobox.min.css');
+copy($sources['root'] . 'node_modules/videobox/dist/overrides.css', $sources['root'] . 'assets/components/videobox/css/overrides.css');
+copy($sources['root'] . 'node_modules/videobox/dist/overrides.min.css', $sources['root'] . 'assets/components/videobox/css/overrides.min.css');
 copy($sources['root'] . 'node_modules/videobox/dist/videobox.js', $sources['root'] . 'assets/components/videobox/js/videobox.js');
 copy($sources['root'] . 'node_modules/videobox/dist/videobox.min.js', $sources['root'] . 'assets/components/videobox/js/videobox.min.js');
 
