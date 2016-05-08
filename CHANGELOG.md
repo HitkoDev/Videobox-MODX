@@ -1,5 +1,6 @@
 ### 5.0.0 rc 5 - *8. May 2016*
   * fix bug with PHP-GD
+  * update dependencies
 
 ### 5.0.0 rc 4 - *28. April 2016*
   * fix slider bug

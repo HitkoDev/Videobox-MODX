@@ -78,7 +78,7 @@ class Videobox {
 		$this->modx->regClientScript($_GET['dev'] ? '/Videobox/dist/videobox.js' : $this->config['assets_url'] . 'js/videobox.min.js');
         
         $overrides = file_get_contents($_GET['dev'] ? '/srv/htdocs/Videobox/dist/overrides.css' : $this->config['assets_path'] . 'css/overrides.min.css');
-        $styleOverride = str_replace(array('#005723', '#84d1a4'), array('#' . $this->config['tColor'], '#' . $this->config['hColor']), $overrides);
+        $styleOverride = str_replace(array('#005723', '#84d1a4', '.vb-overrides-wrap'), array('#' . $this->config['tColor'], '#' . $this->config['hColor'], ''), $overrides);
         $this->modx->regClientStartupHTMLBlock('<style>' . $styleOverride . '</style>');
 	}
 	
