@@ -1,3 +1,6 @@
+### 5.0.0 rc 5 - *8. May 2016*
+  * fix bug with PHP-GD
+
 ### 5.0.0 rc 4 - *28. April 2016*
   * fix slider bug
   * allow users to modify the UI colour

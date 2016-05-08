@@ -205,28 +205,28 @@ class Videobox {
 				
 					for($y = 3; $y < $imagedata[1]; $y++) {
 						for($x = 3; $x < $imagedata[0]; $x++) {
-							if($this->_chkB(_gdRGB($src_img, $x, $y))) break 2;
+							if($this->_chkB($this->_gdRGB($src_img, $x, $y))) break 2;
 						}
 						$b_t = $y;
 					}
 
 					for($y = $imagedata[1]-4; $y >= 0; $y--) {
 						for($x = 3; $x < $imagedata[0] - 3; $x++) {
-							if($this->_chkB(_gdRGB($src_img, $x, $y))) break 2;
+							if($this->_chkB($this->_gdRGB($src_img, $x, $y))) break 2;
 						}
 						$b_b = $imagedata[1] - 1 - $y;
 					}
 
 					for($x = 3; $x < $imagedata[0]; $x++) {
 						for($y = 3; $y < $imagedata[1]; $y++) {
-							if($this->_chkB(_gdRGB($src_img, $x, $y))) break 2;
+							if($this->_chkB($this->_gdRGB($src_img, $x, $y))) break 2;
 						}
 						$b_l = $x;
 					}
 
 					for($x = $imagedata[0]-4; $x >= 0; $x--) {
 						for($y = 3; $y < $imagedata[1]; $y++) {
-							if($this->_chkB(_gdRGB($src_img, $x, $y))) break 2;
+							if($this->_chkB($this->_gdRGB($src_img, $x, $y))) break 2;
 						}
 						$b_r = $imagedata[0] - 1 - $x;
 					}
