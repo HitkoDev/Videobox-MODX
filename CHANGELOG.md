@@ -1,3 +1,6 @@
+  * fix pop-up position in some browsers
+  * reduce animation flickering
+
 ### 5.0.0 rc 5 - *8. May 2016*
   * fix bug with PHP-GD
   * update dependencies
