@@ -1,5 +1,9 @@
+### 5.0.0 pl - *22. May 2016*
   * fix pop-up position in some browsers
   * reduce animation flickering
+  * update dependencies
+  * recompile CSS with better backwards compatibility 
+  * update the README file
 
 ### 5.0.0 rc 5 - *8. May 2016*
   * fix bug with PHP-GD

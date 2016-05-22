@@ -1,6 +1,6 @@
 /**
  * @license
- * Video.js 5.10.1 <http://videojs.com/>
+ * Video.js 5.10.2 <http://videojs.com/>
  * Copyright Brightcove, Inc. <https://www.brightcove.com/>
  * Available under Apache License Version 2.0
  * <https://github.com/videojs/video.js/blob/master/LICENSE>
@@ -17100,6 +17100,8 @@ Tech.withSourceHandlers = function (_Tech) {
     // than clear all of our current tracks
     if (this.currentSource_) {
       this.clearTracks(['audio', 'video']);
+
+      this.currentSource_ = null;
     }
 
     if (sh !== _Tech.nativeSourceHandler) {
@@ -21713,7 +21715,7 @@ setup.autoSetupTimeout(1, videojs);
  *
  * @type {String}
  */
-videojs.VERSION = '5.10.1';
+videojs.VERSION = '5.10.2';
 
 /**
  * The global options object. These are the settings that take effect

@@ -1,12 +1,17 @@
 <img src="https://cloud.githubusercontent.com/assets/4700881/10467953/b5fb0616-71fc-11e5-9847-0e2afd05ff1f.png" alt="videobox logo" width="200" align="right">
-#[Videobox - a lightweight and versitile video player](http://hitko.eu/videobox)
-Videobox is a MODX extension for adding video (and audio) to your site. It supports videos from YouTube and Vimeo, as well as music from SoundCloud, Twithc videos and streams, and HTML5 supported video and audio formats. It offers several ways to insert a video, including direct player, pop-up player, and a video gallery. Just put the video link in the Videobox tag and you'll be up & running!
+#[Videobox - a lightweight video player and gallery](https://hitko.eu/videobox)
+Videobox is a MODX extension for adding video and audio to your site. It supports videos from YouTube and Vimeo, as well as music from SoundCloud, Twitch videos and streams, and HTML5 supported video and audio formats. There are many ways to insert a video player in the content, including the standard video player, a pop-up player, expanding inline player, or a gallery of videos. All you have to do is put ```[[Videobox? &videos=`XfSfK8AkGVo`]]``` and you get a beautiful responsive video player. 
 
-###Box display
-Box display is a great way to insert videos without sacrificing a lot of space for the player. That way it makes your articles straight to the point without unnecessary distractions while keeping the videos right where they belong to. Rather than the huge full-size video player taking up space and distracting the reader, the box display only shows a small video thumbnail with an optional title. When user clicks the thumbnail, the video opens in a lightbox player, or in an inline player. The box element itself behaves just like the photos in your article - you can set it to float to the left or to the right, centre it with margin: 0 auto; or apply any other CSS styling to it.
+###Demo
+If you want to see Videobox in action, check out the [demo page](https://hitko.eu/videobox)
 
-###Link display
-Box display is great, however it's not ideal when the video is just an irrelevant reference or a note, or when the video itself isn't directly related to the topic. In this case even a small box thumbnail would be irrelevant and distracting for the reader. An ordinary link to the video seems good enough, but when users click it they leave your website. Videobox link display solves that problem - you can still keep the reference, but instead of redirecting users to an external page the link will open a lightbox player directly on your website.
+###Basic options
+The example above uses a single YouTube video ID, but Videobox can do much more. Below is an example of the full video syntax, including start and end time, video title, and multiple videos. Check out the [Getting started guide](https://hitko.eu/videobox/getting-started/#htk-videobox-for-modx) for a detailed explanation of the syntax, and [Videobox documentation](https://hitko.eu/videobox/documentation/) for a guide on the parameters you can use.
 
-###Gallery display
-In a way, the gallery display is the exact opposite of the box and the link display. It's designed to display a lot of videos in an organised manner, featuring a responsive grid and a built-in pagination. That way you can insert all of your videos at once and let users browse through them quickly. Alternatively a gallery can be displayed as a slider, showing only a few thumbnails at a time. 
+```
+m--HWCQq5Ew#0:30-1:50|Alestorm ft. Lady Gaga - Magnetic Telephone|, 
+cTtka7r62V8|Soilwork - The Ride Majestic|, 
+mIegk9Ukx4k|Kontrust - Just Propaganda|, 
+FANEejDEvCA|Justin Hayward - The Story In Your Eyes|, 
+4auH5kwmd_Y|Kataklysm - The Black Sheep
+```
