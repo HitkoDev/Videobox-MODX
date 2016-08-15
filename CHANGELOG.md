@@ -1,3 +1,8 @@
+### 5.1.0 pl - *15. August 2016*
+  * improved Videobox library
+  * updated to latest dependencies
+  * remove legacy code
+
 ### 5.0.0 pl - *22. May 2016*
   * fix pop-up position in some browsers
   * reduce animation flickering

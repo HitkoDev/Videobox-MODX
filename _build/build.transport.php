@@ -8,7 +8,7 @@ set_time_limit(0);
 /* define package names */
 define('PKG_NAME','Videobox');
 define('PKG_NAME_LOWER','videobox');
-define('PKG_VERSION','5.0.0');
+define('PKG_VERSION','5.1.0');
 define('PKG_RELEASE','pl');
  
 /* define build paths */
@@ -76,22 +76,17 @@ $category->addMany($chunks);
 /* copy files */
 
 // Videobox-JS
-copy($sources['root'] . 'node_modules/videobox/dist/videobox.css', $sources['root'] . 'assets/components/videobox/css/videobox.css');
-copy($sources['root'] . 'node_modules/videobox/dist/videobox.min.css', $sources['root'] . 'assets/components/videobox/css/videobox.min.css');
-copy($sources['root'] . 'node_modules/videobox/dist/overrides.css', $sources['root'] . 'assets/components/videobox/css/overrides.css');
-copy($sources['root'] . 'node_modules/videobox/dist/overrides.min.css', $sources['root'] . 'assets/components/videobox/css/overrides.min.css');
-copy($sources['root'] . 'node_modules/videobox/dist/videobox.js', $sources['root'] . 'assets/components/videobox/js/videobox.js');
-copy($sources['root'] . 'node_modules/videobox/dist/videobox.min.js', $sources['root'] . 'assets/components/videobox/js/videobox.min.js');
+copy($sources['root'] . 'node_modules/videobox/videobox.min.css', $sources['root'] . 'assets/components/videobox/css/videobox.min.css');
+copy($sources['root'] . 'node_modules/videobox/overrides.min.css', $sources['root'] . 'assets/components/videobox/css/overrides.min.css');
+copy($sources['root'] . 'node_modules/videobox/videobox.min.js', $sources['root'] . 'assets/components/videobox/js/videobox.min.js');
 
 // VideoJS
-copy($sources['root'] . 'node_modules/video.js/dist/video.js', $sources['root'] . 'assets/components/videobox/video-js/video.js');
 copy($sources['root'] . 'node_modules/video.js/dist/video.min.js', $sources['root'] . 'assets/components/videobox/video-js/video.min.js');
-copy($sources['root'] . 'node_modules/video.js/dist/video-js.swf', $sources['root'] . 'assets/components/videobox/video-js/video-js.swf');
 
 // libs
 copy($sources['root'] . 'node_modules/jquery/dist/jquery.min.js', $sources['root'] . 'assets/components/videobox/js/jquery.min.js');
 copy($sources['root'] . 'node_modules/web-animations-js/web-animations.min.js', $sources['root'] . 'assets/components/videobox/js/web-animations.min.js');
- 
+
 /* create category vehicle */
 $vehicle = $builder->createVehicle($adaptersCategory, array(
     xPDOTransport::UNIQUE_KEY => 'category',

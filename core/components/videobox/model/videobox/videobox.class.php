@@ -72,10 +72,10 @@ class Videobox {
 	}
 	
 	function loadAssets(){
-		$this->modx->regClientCSS($_GET['dev'] ? '/Videobox/dist/videobox.css' : $this->config['assets_url'] . 'css/videobox.min.css');
+		$this->modx->regClientCSS($_GET['dev'] ? '/Videobox/videobox.min.css' : $this->config['assets_url'] . 'css/videobox.min.css');
 		$this->modx->regClientScript($this->config['assets_url'] . 'js/jquery.min.js');
 		$this->modx->regClientScript($this->config['assets_url'] . 'js/web-animations.min.js');
-		$this->modx->regClientScript($_GET['dev'] ? '/Videobox/dist/videobox.js' : $this->config['assets_url'] . 'js/videobox.min.js');
+		$this->modx->regClientScript($_GET['dev'] ? '/Videobox/videobox.min.js' : $this->config['assets_url'] . 'js/videobox.min.js');
         
         $overrides = file_get_contents($_GET['dev'] ? '/srv/htdocs/Videobox/dist/overrides.css' : $this->config['assets_path'] . 'css/overrides.min.css');
         $styleOverride = str_replace(array('#005723', '#84d1a4', '.vb-overrides-wrap'), array('#' . $this->config['tColor'], '#' . $this->config['hColor'], ''), $overrides);

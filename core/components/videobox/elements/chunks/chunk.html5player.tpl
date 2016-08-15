@@ -16,9 +16,7 @@
 	</video>
 
 	<script src="[[+assets]]video-js/video.min.js"></script>
-	<script>
-		videojs.options.flash.swf = '[[+assets]]/video-js/video-js.swf';
-		
+	<script>		
 		var vid = videojs("vb-html5-video");
 
 		var start = [[+start]];
