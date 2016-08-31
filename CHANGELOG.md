@@ -1,3 +1,7 @@
+### 5.1.1 pl - *13. August 2016*
+  * fix tempfiles location
+  * set pop-up parent (root) element
+
 ### 5.1.0 pl - *15. August 2016*
   * improved Videobox library
   * updated to latest dependencies
