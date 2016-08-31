@@ -8,7 +8,7 @@ set_time_limit(0);
 /* define package names */
 define('PKG_NAME','Videobox');
 define('PKG_NAME_LOWER','videobox');
-define('PKG_VERSION','5.1.0');
+define('PKG_VERSION','5.1.1');
 define('PKG_RELEASE','pl');
  
 /* define build paths */
