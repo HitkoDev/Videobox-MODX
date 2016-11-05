@@ -34,5 +34,5 @@ node_modules
 
 assets/components/videobox/cache/*
 _build/build.config.php
-assets/components/videobox/css/*.min.css
-assets/components/videobox/js/*.min.js
+assets/components/videobox/css/*
+assets/components/videobox/js/*

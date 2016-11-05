@@ -73,7 +73,6 @@ class Videobox {
 	
 	function loadAssets(){
 		$this->modx->regClientCSS($_GET['dev'] ? '/Videobox/videobox.min.css' : $this->config['assets_url'] . 'css/videobox.min.css');
-		$this->modx->regClientScript($this->config['assets_url'] . 'js/jquery.min.js');
 		$this->modx->regClientScript($this->config['assets_url'] . 'js/web-animations.min.js');
 		$this->modx->regClientScript($_GET['dev'] ? '/Videobox/videobox.min.js' : $this->config['assets_url'] . 'js/videobox.min.js');
         

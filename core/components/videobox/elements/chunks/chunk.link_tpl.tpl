@@ -1,1 +1,1 @@
-<a href="[[+link]]" class="vb_link" rel="[[+rel]]" title="[[+title]]" data-videobox="[[+vbOptions]]">[[+linkText]]</a>
+<a href="[[+link]]" class="vb_link [[+class]]" style="[[+style]]" rel="[[+rel]]" title="[[+title]]" data-videowidth="[[+pWidth]]" data-videoheight="[[+pHeight]]">[[+linkText]]</a>

@@ -8,8 +8,8 @@ set_time_limit(0);
 /* define package names */
 define('PKG_NAME','Videobox');
 define('PKG_NAME_LOWER','videobox');
-define('PKG_VERSION','5.1.1');
-define('PKG_RELEASE','pl');
+define('PKG_VERSION','6.0.0');
+define('PKG_RELEASE','rc1');
  
 /* define build paths */
 $root = dirname(dirname(__FILE__)).'/';
@@ -76,15 +76,17 @@ $category->addMany($chunks);
 /* copy files */
 
 // Videobox-JS
-copy($sources['root'] . 'node_modules/videobox/videobox.min.css', $sources['root'] . 'assets/components/videobox/css/videobox.min.css');
-copy($sources['root'] . 'node_modules/videobox/overrides.min.css', $sources['root'] . 'assets/components/videobox/css/overrides.min.css');
-copy($sources['root'] . 'node_modules/videobox/videobox.min.js', $sources['root'] . 'assets/components/videobox/js/videobox.min.js');
+copy($sources['root'] . 'node_modules/videobox/dist/videobox.min.css', $sources['root'] . 'assets/components/videobox/css/videobox.min.css');
+copy($sources['root'] . 'node_modules/videobox/dist/videobox.css.map', $sources['root'] . 'assets/components/videobox/css/videobox.css.map');
+copy($sources['root'] . 'node_modules/videobox/dist/overrides.min.css', $sources['root'] . 'assets/components/videobox/css/overrides.min.css');
+copy($sources['root'] . 'node_modules/videobox/dist/overrides.css.map', $sources['root'] . 'assets/components/videobox/css/overrides.css.map');
+copy($sources['root'] . 'node_modules/videobox/dist/videobox.min.js', $sources['root'] . 'assets/components/videobox/js/videobox.min.js');
+copy($sources['root'] . 'node_modules/videobox/dist/videobox.js.map', $sources['root'] . 'assets/components/videobox/js/videobox.js.map');
 
 // VideoJS
 copy($sources['root'] . 'node_modules/video.js/dist/video.min.js', $sources['root'] . 'assets/components/videobox/video-js/video.min.js');
 
 // libs
-copy($sources['root'] . 'node_modules/jquery/dist/jquery.min.js', $sources['root'] . 'assets/components/videobox/js/jquery.min.js');
 copy($sources['root'] . 'node_modules/web-animations-js/web-animations.min.js', $sources['root'] . 'assets/components/videobox/js/web-animations.min.js');
 
 /* create category vehicle */

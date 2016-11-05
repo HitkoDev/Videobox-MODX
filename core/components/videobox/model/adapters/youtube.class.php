@@ -39,11 +39,10 @@ class YouTubeVideo extends VideoboxAdapter {
 	}
 	
 	function getPlayerLink($autoplay = false){
-		$src = 'https://www.youtube.com/embed/' . $this->id . '?wmode=transparent&rel=0&fs=1';
+		$src = 'https://www.youtube-nocookie.com/embed/' . $this->id . '?rel=0&fs=1';
 		if($autoplay) $src .= '&autoplay=1';
 		if($this->start != 0) $src .= '&start=' . $this->start;
 		if($this->end != 0) $src .= '&end=' . $this->end;
 		return $src;
 	}
-	
 }
