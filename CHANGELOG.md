@@ -1,4 +1,7 @@
-### 5.1.1 pl - *31. August 2016*
+### 6.0.0 rc 1 - *5. November 2016*
+  * 
+
+### 5.1.1 pl - *13. August 2016*
   * fix tempfiles location
   * set pop-up parent (root) element
 

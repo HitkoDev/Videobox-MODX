@@ -36,3 +36,4 @@ assets/components/videobox/cache/*
 _build/build.config.php
 assets/components/videobox/css/*
 assets/components/videobox/js/*
+assets/components/videobox/video-js/*
