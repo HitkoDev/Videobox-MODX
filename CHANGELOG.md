@@ -1,5 +1,8 @@
 ### 6.0.0 rc 1 - *5. November 2016*
-  * 
+  * remove jQuery dependency
+  * add source maps to the build
+  * fix templates
+  * varius fixes
 
 ### 5.1.1 pl - *13. August 2016*
   * fix tempfiles location
