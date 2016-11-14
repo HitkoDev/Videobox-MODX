@@ -9,7 +9,7 @@ set_time_limit(0);
 define('PKG_NAME','Videobox');
 define('PKG_NAME_LOWER','videobox');
 define('PKG_VERSION','6.0.0');
-define('PKG_RELEASE','rc1');
+define('PKG_RELEASE','rc2');
  
 /* define build paths */
 $root = dirname(dirname(__FILE__)).'/';
@@ -80,14 +80,11 @@ copy($sources['root'] . 'node_modules/videobox/dist/videobox.min.css', $sources[
 copy($sources['root'] . 'node_modules/videobox/dist/videobox.css.map', $sources['root'] . 'assets/components/videobox/css/videobox.css.map');
 copy($sources['root'] . 'node_modules/videobox/dist/overrides.min.css', $sources['root'] . 'assets/components/videobox/css/overrides.min.css');
 copy($sources['root'] . 'node_modules/videobox/dist/overrides.css.map', $sources['root'] . 'assets/components/videobox/css/overrides.css.map');
-copy($sources['root'] . 'node_modules/videobox/dist/videobox.min.js', $sources['root'] . 'assets/components/videobox/js/videobox.min.js');
-copy($sources['root'] . 'node_modules/videobox/dist/videobox.js.map', $sources['root'] . 'assets/components/videobox/js/videobox.js.map');
+copy($sources['root'] . 'node_modules/videobox/dist/videobox.bundle.js', $sources['root'] . 'assets/components/videobox/js/videobox.bundle.js');
+copy($sources['root'] . 'node_modules/videobox/dist/videobox.bundle.map', $sources['root'] . 'assets/components/videobox/js/videobox.bundle.map');
 
 // VideoJS
 copy($sources['root'] . 'node_modules/video.js/dist/video.min.js', $sources['root'] . 'assets/components/videobox/video-js/video.min.js');
-
-// libs
-copy($sources['root'] . 'node_modules/web-animations-js/web-animations.min.js', $sources['root'] . 'assets/components/videobox/js/web-animations.min.js');
 
 /* create category vehicle */
 $vehicle = $builder->createVehicle($adaptersCategory, array(
@@ -136,7 +133,7 @@ $vehicle->resolve('file',array(
     'source' => $sources['source_assets'],
     'target' => "return MODX_ASSETS_PATH . 'components/';",
 	xPDOTransport::FILE_RESOLVE_OPTIONS => array(
-		'copy_exclude_patterns' => array('/cache/', '/\.zip/', '/(?<!\.min)\.(js|css)/'),
+		'copy_exclude_patterns' => array('/cache/', '/\.zip/', '/(?<!\.min|?<!\.bundle)\.(js|css)/'),
 	),
 ));
 $vehicle->resolve('file',array(
