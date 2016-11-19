@@ -1,3 +1,8 @@
+### 6.0.0 rc 3 - *19. November 2016*
+  * fix bug with missing / inaccessible thumbnails
+  * fix bug with loading Videobox in ```<head>```
+  * add missing thumbnail images
+
 ### 6.0.0 rc 2 - *14. November 2016*
   * bug fixes
   * bundled the polyfill

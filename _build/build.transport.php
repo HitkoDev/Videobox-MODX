@@ -9,7 +9,7 @@ set_time_limit(0);
 define('PKG_NAME','Videobox');
 define('PKG_NAME_LOWER','videobox');
 define('PKG_VERSION','6.0.0');
-define('PKG_RELEASE','rc2');
+define('PKG_RELEASE','rc3');
  
 /* define build paths */
 $root = dirname(dirname(__FILE__)).'/';
@@ -82,6 +82,9 @@ copy($sources['root'] . 'node_modules/videobox/dist/overrides.min.css', $sources
 copy($sources['root'] . 'node_modules/videobox/dist/overrides.css.map', $sources['root'] . 'assets/components/videobox/css/overrides.css.map');
 copy($sources['root'] . 'node_modules/videobox/dist/videobox.bundle.js', $sources['root'] . 'assets/components/videobox/js/videobox.bundle.js');
 copy($sources['root'] . 'node_modules/videobox/dist/videobox.bundle.map', $sources['root'] . 'assets/components/videobox/js/videobox.bundle.map');
+
+copy($sources['root'] . 'node_modules/videobox/dist/nobg_audio.png', $sources['root'] . 'assets/components/videobox/img/nobg_audio.png');
+copy($sources['root'] . 'node_modules/videobox/dist/nobg_video.png', $sources['root'] . 'assets/components/videobox/img/nobg_video.png');
 
 // VideoJS
 copy($sources['root'] . 'node_modules/video.js/dist/video.min.js', $sources['root'] . 'assets/components/videobox/video-js/video.min.js');
