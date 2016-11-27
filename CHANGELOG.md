@@ -1,3 +1,8 @@
+### 6.0.0 rc 4 - *27. November 2016*
+  * fix pop-up bug
+  * remove legacy code from core
+  * fix potential bug with closing a player
+
 ### 6.0.0 rc 3 - *19. November 2016*
   * fix bug with missing / inaccessible thumbnails
   * fix bug with loading Videobox in ```<head>```
@@ -26,7 +31,7 @@
   * fix pop-up position in some browsers
   * reduce animation flickering
   * update dependencies
-  * recompile CSS with better backwards compatibility 
+  * recompile CSS with better backwards compatibility
   * update the README file
 
 ### 5.0.0 rc 5 - *8. May 2016*
@@ -51,7 +56,7 @@
   * moved to TS and SASS
   * bug fixes
   * updated HTML5 player
-  * aded root option for Videobox player (pop-up is now appended to options.root, which should be the default scroll wrap)
+  * added root option for Videobox player (pop-up is now appended to options.root, which should be the default scroll wrap)
   * improved overall performance
 
 ### 5.0.0 beta 3 - *4. February 2016*
@@ -65,3 +70,4 @@
 
 ### 5.0.0 beta 1 - *28. October 2015*
   * initial release
+
