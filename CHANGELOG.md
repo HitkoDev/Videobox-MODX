@@ -1,3 +1,8 @@
+### 6.0.0 rc 5 - *29. November 2016*
+  * fix pop-up position on some pages
+  * update dependencies
+  * remove unused code
+
 ### 6.0.0 rc 4 - *27. November 2016*
   * fix pop-up bug
   * remove legacy code from core
