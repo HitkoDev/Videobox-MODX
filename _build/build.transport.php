@@ -9,7 +9,7 @@ set_time_limit(0);
 define('PKG_NAME','Videobox');
 define('PKG_NAME_LOWER','videobox');
 define('PKG_VERSION','6.0.0');
-define('PKG_RELEASE','rc5');
+define('PKG_RELEASE','rc6');
  
 /* define build paths */
 $root = dirname(dirname(__FILE__)).'/';

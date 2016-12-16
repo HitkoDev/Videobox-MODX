@@ -1,3 +1,8 @@
+### 6.0.0 rc 6 - *16. December 2016*
+  * add bindings to close a player
+  * add an option to hide pop-up footer
+  * allow passing any options to the player
+
 ### 6.0.0 rc 5 - *29. November 2016*
   * fix pop-up position on some pages
   * update dependencies
