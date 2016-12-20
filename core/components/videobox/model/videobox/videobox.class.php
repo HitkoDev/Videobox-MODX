@@ -46,9 +46,21 @@ class Videobox {
             'assets_path' => $this->modx->getOption('videobox.assets_path', null, MODX_ASSETS_PATH.'components/videobox/'),
             'core_path' => $this->modx->getOption('videobox.core_path', null, $this->modx->getOption('core_path').'components/videobox/')
         ), $config);
+
+        $this->setColor('color', '00a645');
+        $this->setColor('tColor', '005723');
+        $this->setColor('hColor', '84d1a4');
+        $this->setColor('bgColor', '00a645');
+
         $this->processors = null;
     }
-    
+
+    function setColor($name, $default){
+        $this->config[$name] = trim(str_replace('#', '', $this->config[$name]));
+        if(strlen($this->config[$name]) != 6) $this->config[$name] = '';
+        if(!$this->config[$name]) $this->config[$name] = $default;
+    }
+
     function getProcessors(){
         if($this->processors) return $this->processors;
         
@@ -133,6 +145,7 @@ class Videobox {
         }
         
         // If $video is a VideoboxAdapter object, get its data, otherwise get nobg data
+        $isNobg = false;
         if($video instanceof VideoboxAdapter){
             $nobg = 'nobg_' . ($video->type == 'a' ? 'audio' : 'video');
             $hash = md5($video->id . $name);
@@ -140,8 +153,9 @@ class Videobox {
         } else {
             // Video is a NOBG name
             $nobg = $video;
-            $hash = md5($video . $name);
+            $hash = md5($video . $name . '-' . $this->config['bgColor']);
             $img = array($this->config['assets_path'] . 'img/'.$nobg.'.png', IMAGETYPE_PNG);
+            $isNobg = true;
         }
         
         if(!is_dir($this->config['assets_path'] . 'cache')) mkdir($this->config['assets_path'] . 'cache');
@@ -245,8 +259,13 @@ class Videobox {
                 $tWidth = $imagedata[0];
                 $tHeight = $imagedata[1];
                 $newimg = imagecreatetruecolor($tWidth, $tHeight);
-                $black = imagecolorallocate($newimg, 0, 0, 0);
-                imagefilledrectangle($newimg, 0, 0, $tWidth, $tHeight, $black);
+                if($isNobg){
+                    list($r, $g, $b) = sscanf($this->config['bgColor'], "%02x%02x%02x");
+                    $bgColor = imagecolorallocate($newimg, $r, $g, $b);
+                } else {
+                    $bgColor = imagecolorallocate($newimg, 0, 0, 0);
+                }
+                imagefilledrectangle($newimg, 0, 0, $tWidth, $tHeight, $bgColor);
                 imagecopyresampled($newimg, $src_img, 0, 0, $b_l, $b_t, $tWidth, $tHeight, $tWidth, $tHeight);
             } else {
             
@@ -268,6 +287,11 @@ class Videobox {
                 $newimg = imagecreatetruecolor($tWidth, $tHeight);
                 $black = imagecolorallocate($newimg, 0, 0, 0);
                 imagefilledrectangle($newimg, 0, 0, $tWidth, $tHeight, $black);
+                if($isNobg){
+                    list($r, $g, $b) = sscanf($this->config['bgColor'], "%02x%02x%02x");
+                    $bgColor = imagecolorallocate($newimg, $r, $g, $b);
+                    imagefilledrectangle($newimg, $off_w, $off_h, $new_w + $off_w, $new_h + $off_h, $bgColor);
+                }
                 imagecopyresampled($newimg, $src_img, $off_w, $off_h, $b_l, $b_t, $new_w, $new_h, $imagedata[0], $imagedata[1]);
             }
             
@@ -354,7 +378,12 @@ class Videobox {
                 $new_h = (int)$new_h;
                 $off_w = (int)(($tWidth - $new_w)/2);
                 $off_h = (int)(($tHeight - $new_h)/2);
-                
+
+                if($isNobg){
+                    $imgM->setImageBackgroundColor(new ImagickPixel('#'.$this->config['bgColor']));
+                    $imgM->setImageAlphaChannel(Imagick::ALPHACHANNEL_REMOVE);
+                    $imgM->mergeImageLayers(Imagick::LAYERMETHOD_FLATTEN);
+                }
                 $imgM->setImageBackgroundColor(new ImagickPixel("rgb(0, 0, 0)"));
                 $imgM->resizeImage($new_w, $new_h, imagick::FILTER_CATROM, 1);
                 $imgM->extentImage($tWidth, $tHeight, -$off_w, -$off_h);

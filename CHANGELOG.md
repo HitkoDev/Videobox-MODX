@@ -1,3 +1,8 @@
+### 6.0.0 rc 7 - *20. December 2016*
+  * customise nothumb colour
+  * fix HTML5 player template
+  * update the video.js
+
 ### 6.0.0 rc 6 - *16. December 2016*
   * add bindings to close a player
   * add an option to hide pop-up footer
